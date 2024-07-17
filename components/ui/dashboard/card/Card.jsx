@@ -1,18 +1,23 @@
-import { MdSupervisedUserCircle } from "react-icons/md";
+import Image from "next/image";
 import styles from "./Card.module.css";
 
-const Card = ({ item }) => {
+const Card = ({ name, data, lastModified, contentType, status }) => {
+  const imageSrc = `data:${contentType};base64,${data}`;
+
   return (
     <div className={styles.container}>
-      <MdSupervisedUserCircle size={24} />
+      <Image
+        src={imageSrc}
+        alt={name}
+        width={100}
+        height={100}
+        className={styles.image}
+      />
       <div className={styles.texts}>
-        <span className={styles.title}>title</span>
-        <span className={styles.number}>number</span>
+        <span className={styles.title}>{name}</span>
+        <span className={styles.number}>{new Date(lastModified).toLocaleDateString()}</span>
         <span className={styles.detail}>
-          <span className={styles.negative}>
-            porcentaje %
-          </span>{" "}
-          {/* {item.change > 0 ? "more" : "less"} than previous week */}
+          <span className={styles.positive}>{status}</span>
         </span>
       </div>
     </div>

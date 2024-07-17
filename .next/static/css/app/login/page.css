@@ -1,0 +1,46 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/ui/dashboard/loader/Loader.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************/
+.Loader_loaderContainer__Qxf93 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.Loader_loader__z1Lmu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Loader_loader__z1Lmu::before,
+.Loader_loader__z1Lmu::after {
+    position: absolute;
+    content: "";
+    height: 12em;
+    width: 12em;
+    border: 1.5em solid #e11d48;
+    border-radius: 50%;
+    animation: Loader_loader_79178__brlcB 2s linear infinite;
+}
+
+.Loader_loader__z1Lmu::after {
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+@keyframes Loader_loader_79178__brlcB {
+    0% {
+        border: 1.5em solid #e11d48;
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        border: 0 solid #e11d48;
+        transform: scale(1);
+        opacity: 0;
+    }
+}
